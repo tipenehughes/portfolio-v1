@@ -1,0 +1,15 @@
+.button {
+  display: block;
+    height: 3rem;
+    width: 10rem;
+    margin-top: 1.4rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.1rem;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}

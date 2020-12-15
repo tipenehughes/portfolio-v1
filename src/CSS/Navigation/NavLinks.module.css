@@ -1,0 +1,28 @@
+.navItem {
+    display: inline-block;
+    height: auto;
+    width: 8rem;
+    text-align: left;
+}
+
+.navItem ::after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px var(--underline-color);
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+.navItem :hover:after {
+    transform: scaleX(0.6);
+}
+
+.navItem a {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}

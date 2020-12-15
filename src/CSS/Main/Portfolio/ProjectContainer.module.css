@@ -1,0 +1,10 @@
+.projectContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 80%;
+  margin-top: 1rem;
+  background: #fff;
+  flex: 1 1 auto;
+}

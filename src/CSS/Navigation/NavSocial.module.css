@@ -1,0 +1,11 @@
+.navSocial {
+    display: inline-block;
+    width: 5rem;
+    text-align: right;
+}
+
+.socialIcons {
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+    margin: auto;
+}

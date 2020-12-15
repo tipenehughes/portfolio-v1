@@ -1,0 +1,85 @@
+.project {
+    padding: 0.5rem;
+    height: 100%;
+    flex: 1 1 50%;
+}
+
+.projectInner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.projectImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.projectOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease-in-out;
+}
+
+.projectOverlay:focus,
+.projectOverlay:hover {
+    opacity: 1;
+}
+
+.projectOverlayHeader {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    flex: 1 1 auto;
+}
+
+.projectOverlayP {
+    font-size: 1rem;
+    color: #fff;
+    flex: none;
+    text-align: center;
+}
+
+.projectOverlayLink {
+    display: inline-block;
+    margin: 0.5rem;
+    width: 9rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    text-align: center;
+    line-height: 2.8rem;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.projectOverlayLink:focus,
+.projectOverlayLink:hover {
+    background-color: var(--secondary-color);
+}
+
+.projectIcon {
+    font-size: 0.8rem;
+    text-align: right;
+    color: #fff;
+}

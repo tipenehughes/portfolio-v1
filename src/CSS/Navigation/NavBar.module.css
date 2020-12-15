@@ -1,0 +1,24 @@
+.navBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding: 0 15% 0 15%;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+.navBar a,
+.navBar a:link,
+.navBar a:visited {
+    color: var(--font-color);
+}
+
+.navBar a:focus,
+.navBar a:hover {
+    color: var(--underline-color);
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
