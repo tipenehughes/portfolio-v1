@@ -9,3 +9,9 @@
     color: var(--secondary-color);
     margin: auto;
 }
+
+.mobileSocialIcons {
+    color: #fff;
+    font-size: 3rem;
+    margin: 2rem;
+}

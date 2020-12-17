@@ -1,12 +1,16 @@
 import React from "react";
 import styles from "../../CSS/Main/Article.module.css";
-import ProjectContainer from "../Main/Portfolio/ProjectContainer";
-import ContactForm from "../Main/Contact/ContactForm";
+import Technologies from "./About Me/Technologies";
+import ProjectContainer from "./Portfolio/ProjectContainer";
+import ContactForm from "./Contact/ContactForm";
 
 const Article = ({ data, index }) => {
-    console.log(data, index);
+    const setRoute = (d) => {
+        const routeName = d.heading.split(" ")[0];
+        return routeName.toLowerCase();
+    };
     return (
-        <article className="container">
+        <article className={styles.container} id={setRoute(data)}>
             <section className={styles.articleCard}>
                 <div className={styles.headingContainer}>
                     <h2 className={styles.articleHeading}>
@@ -16,11 +20,13 @@ const Article = ({ data, index }) => {
                 </div>
                 {data.p1 && <p>{data.p1}</p>}
                 {data.p2 && <p>{data.p2}</p>}
+                {data.technologies && <Technologies />}
                 {data.p3 && <p>{data.p3}</p>}
                 {data.portfolio && <ProjectContainer />}
                 {data.form && <ContactForm />}
             </section>
         </article>
+        // </Route>
     );
 };
 

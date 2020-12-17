@@ -19,4 +19,11 @@
     padding: 5% 15% 0 15%;
 }
 
-
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+    .container {
+        padding: 5% 5% 5% 5%;
+    }
+}

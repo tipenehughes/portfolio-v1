@@ -1,3 +1,11 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 5% 15% 5% 15%;
+    display: grid;
+    place-items: center;
+}
+
 .articleHeading {
     display: inline-block;
     font-weight: 600;
@@ -41,6 +49,13 @@
     transform: translate(-50%);
     bottom: 1;
     height: 5px;
-    width: 5%;
+    width: 20%;
     background: var(--underline-color);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 5% 5% 5% 5%;
+    }
 }

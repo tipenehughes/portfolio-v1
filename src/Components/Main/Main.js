@@ -12,6 +12,7 @@ const Main = () => {
       building an online presence for disadvantaged communities
       back home in New Zealand.`,
             p3: `Keep scrolling to see some of my latest work!`,
+            technologies: true,
         },
         {
             heading: "Portfolio",

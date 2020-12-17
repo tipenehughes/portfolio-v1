@@ -8,8 +8,9 @@
 }
 
 .footerIcons {
-    font-size: 1rem;
-    padding: 0 2rem;
+    font-size: 3rem;
+    margin: 0 2rem;
+    color: var(--secondary-color);
 }
 
 .copyright {

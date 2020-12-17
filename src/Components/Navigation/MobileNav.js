@@ -1,29 +1,57 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 import NavSocial from "./NavSocial";
+import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MobileNav = () => {
+import styles from "../../CSS/Navigation/MobileNav.module.css";
+
+const MobileNav = ({ handleSetMobileMenu, menuOpen }) => {
+    // use window.width
+    const mobile = {
+        closed: { x: -100 },
+        open: { x: 0 },
+    };
     return (
-        <nav>
-            <div class="mobile-nav">
-                <div class="mobile-nav-overlay-hidden">
-                    <ul class="mobile-nav-options">
-                        <NavLinks class="mobileMenuItem" input={"about"} />
-                        <NavLinks class="mobileMenuItem" input={"Portfolio"} />
-                        <NavLinks class="mobileMenuItem" input={"Contact"} />
-                        <NavSocial />
+        <motion.nav
+            variants={mobile}
+            inital={false}
+            animate={menuOpen ? "open" : "closed"}
+            className={styles.nav}
+        >
+            <div className={styles.mobileNav}>
+                <div className={styles.mobileNavOverlayHidden}>
+                    <ul className={styles.mobileNavOptions}>
+                        <NavLinks navClass={"mobileMenuItem"} input={"About"} />
+                        <NavLinks
+                            navClass={"mobileMenuItem"}
+                            input={"Portfolio"}
+                        />
+                        <NavLinks
+                            navClass={"mobileMenuItem"}
+                            input={"Contact"}
+                        />
+                        <div className={styles.socialContainer}>
+                            <NavSocial
+                                navSocial={""}
+                                socialIcons={"mobileSocialIcons"}
+                            />
+                        </div>
                     </ul>
                 </div>
                 <button
-                    id="mobileMenu"
-                    class="mobile-menu"
-                    aria-label="Toggle menu."
+                    className={styles.mobileMenu}
+                    onClick={() => handleSetMobileMenu()}
+                    aria-label="Toggle menu"
                     aria-controls="mobile-nav-overlay-hidden"
                 >
-                    <i class="fas fa-bars"></i>
+                    <FontAwesomeIcon
+                        icon={["fas", "bars"]}
+                        className={styles.icon}
+                    />
                 </button>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 

@@ -26,3 +26,12 @@
     font-weight: 400;
     transition: all 0.2s ease-in-out;
 }
+
+.mobileMenuItem {
+    margin: 2rem;
+}
+.mobileMenuItem a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 3rem;
+}

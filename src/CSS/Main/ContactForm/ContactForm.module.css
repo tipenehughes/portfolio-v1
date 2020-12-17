@@ -88,4 +88,35 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -4px -4px 12px 0 rgba(255, 255, 255, 0.3);
+    transition: all ease 0.1s;
+}
+
+.submitInput:hover {
+    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.25),
+        -4px -4px 12px 0 rgba(255, 255, 255, 0.3);
+    transform: scale(0.95);
+    transition: all ease 0.1s;
+}
+
+@media only screen and (max-width: 768px) {
+    .contactForm {
+        width: 100%;
+    }
+    .form {
+        flex-direction: column;
+    }
+    .form div {
+        width: 100%;
+        padding: 0.25rem;
+        text-align: center;
+    }
+    .submit {
+        text-align: center;
+        margin-left: 0rem;
+    }
+    .submitInput {
+        width: 98%;
+    }
 }
