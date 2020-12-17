@@ -5,14 +5,13 @@
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 100vh;
-    z-index: 100;
+    height: 10vh;
 }
 
 .mobileMenu {
     margin: 1rem;
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: var(--secondary-color);
     outline: none;
     border: none;
@@ -22,11 +21,12 @@
 
 .mobileNavOverlayHidden {
     position: absolute;
-    height: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
     width: 100%;
-    /* transform: translate(100%, 45%); */
     background-color: var(--secondary-color);
-    z-index: 100;
+    z-index: 150;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +44,7 @@
 }
 .icon {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -55,7 +55,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .mobileNav {
-      visibility: visible;
-  }
+    .mobileNav {
+        visibility: visible;
+    }
 }

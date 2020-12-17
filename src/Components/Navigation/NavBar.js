@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavLinks from "./NavLinks";
 import NavSocial from "./NavSocial";
 import MobileNav from "./MobileNav";
@@ -7,7 +7,17 @@ import styles from "../../CSS/Navigation/NavBar.module.css";
 const NavBar = () => {
     const [navScroll, setNavScroll] = useState("");
     const [mobileMenu, setMobileMenu] = useState(false);
+    const [width, setWidth] = useState(window.innerWidth);
 
+    // To set screen width for mobile menu and NavLinks
+    const handleResize = () => {
+        setWidth(window.innerWidth);
+    };
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+    }, []);
+
+    // To set state if NavBar grows
     const scrollFunction = () => {
         document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
             ? setNavScroll("scroll")
@@ -16,17 +26,28 @@ const NavBar = () => {
     window.onscroll = () => {
         scrollFunction();
     };
+
+    // To set state if mobile menu is open
     const handleSetMobileMenu = () => {
         return !mobileMenu ? setMobileMenu(true) : setMobileMenu(false);
     };
 
+    // Nav links
+    const navigationLinks = ["About", "Portfolio", "Contact"];
+
     return (
         <>
-            <nav id="nav" className={`${styles.navBar} ${styles[navScroll]}`}>
+            <nav className={`${styles.navBar} ${styles[navScroll]}`}>
                 <ul>
-                    <NavLinks input={"About"} navClass={"navItem"} />
-                    <NavLinks input={"Portfolio"} navClass={"navItem"} />
-                    <NavLinks input={"Contact"} navClass={"navItem"} />
+                    {navigationLinks.map((links) => {
+                        return (
+                            <NavLinks
+                                input={links}
+                                navClass={"navItem"}
+                                width={width}
+                            />
+                        );
+                    })}
                 </ul>
                 <ul>
                     <NavSocial
@@ -38,6 +59,8 @@ const NavBar = () => {
             <MobileNav
                 handleSetMobileMenu={handleSetMobileMenu}
                 menuOpen={mobileMenu}
+                width={width}
+                navigationLinks={navigationLinks}
             />
         </>
     );
