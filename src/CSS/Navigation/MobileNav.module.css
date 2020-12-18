@@ -17,7 +17,7 @@
     background-color: var(--secondary-color);
     outline: none;
     border: none;
-    z-index: 200;
+    z-index: 200;    
     cursor: pointer;
     z-index: 15;
 }
@@ -33,7 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    opacity: 0;
 }
 
 .mobileNavOptions {

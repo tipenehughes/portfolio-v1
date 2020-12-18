@@ -10,16 +10,16 @@ const Languages = () => {
     return (
         <>
             <div className={styles.imageContainer}>
-                <img src={html} alt="" class={styles.image} />
+                <img src={html} alt="" className={styles.image} />
             </div>
             <div className={styles.imageContainer}>
-                <img src={css} alt="" class={styles.image} />
+                <img src={css} alt="" className={styles.image} />
             </div>
             <div className={styles.imageContainer}>
-                <img src={js} alt="" class={styles.image} />
+                <img src={js} alt="" className={styles.image} />
             </div>
             <div className={styles.imageContainer}>
-                <img src={react} alt="" class={styles.image} />
+                <img src={react} alt="" className={styles.image} />
             </div>
         </>
     );

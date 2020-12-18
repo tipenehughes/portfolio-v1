@@ -9,10 +9,11 @@ import styles from "../../../CSS/Main/ContactForm/ContactForm.module.css";
 const ContactForm = () => {
     return (
         <div className={styles.contactForm}>
-            <form id="form" method="POST" name="contact" data-netlify="true">
+            <form id="form" method="POST" name="contact">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className={styles.form}>
                     <div className={styles.formControl}>
-                        <label for="name" className={styles.formLabel}>
+                        <label htmlFor="name" className={styles.formLabel}>
                             Name
                         </label>
                         <input
@@ -33,7 +34,7 @@ const ContactForm = () => {
                         <small className={styles.small}>Error Message</small>
                     </div>
                     <div className={styles.formControl}>
-                        <label for="email" className={styles.formLabel}>
+                        <label htmlFor="email" className={styles.formLabel}>
                             Email
                         </label>
                         <input
@@ -54,7 +55,7 @@ const ContactForm = () => {
                         <small className={styles.small}>Error Message</small>
                     </div>
                     <div className={styles.formControl}>
-                        <label for="message" className={styles.formLabel}>
+                        <label htmlFor="message" className={styles.formLabel}>
                             Message
                         </label>
                         <textarea

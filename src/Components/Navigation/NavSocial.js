@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "../../CSS/Navigation/NavSocial.module.css";
 
-const NavSocial = ({ navSocial, socialIcons }) => {
+const NavSocial = ({ socialClass, socialIcons }) => {
     return (
         <>
-            <li className={`${styles[navSocial]}`}>
+            <li className={`${styles[socialClass]}`}>
                 <a
                     href="https://github.com/tipenehughes"
-                    class="socialIcons"
+                    className="socialIcons"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="My Github Portfolio."
@@ -20,10 +20,10 @@ const NavSocial = ({ navSocial, socialIcons }) => {
                     />
                 </a>
             </li>
-            <li className={`${styles[navSocial]}`}>
+            <li className={`${styles[socialClass]}`}>
                 <a
                     href="https://www.linkedin.com/in/tipene-hughes/"
-                    class="socialIcons"
+                    className="socialIcons"
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label="My Linkedin Profile."

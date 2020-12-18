@@ -47,18 +47,19 @@ const NavBar = () => {
         <>
             <nav className={`${styles.navBar} ${styles[navScroll]}`}>
                 <ul>
-                    {navigationLinks.map((links) => {
+                    {navigationLinks.map((links, index) => {
                         return (
                             <NavLinks
                                 input={links}
-                                navClass={"navItem"}                                
+                                navClass={"navItem"}
+                                key={index}
                             />
                         );
                     })}
                 </ul>
                 <ul>
                     <NavSocial
-                        navSocial={"navSocial"}
+                        socialClass={"navSocial"}
                         socialIcons={"socialIcons"}
                     />
                 </ul>

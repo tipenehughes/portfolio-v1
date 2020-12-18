@@ -6,11 +6,8 @@
     background-color: rgb(232, 234, 241);
     padding: 1rem;
 }
-
-.footerIcons {
-    font-size: 3rem;
-    margin: 0 2rem;
-    color: var(--secondary-color);
+.iconContainer {
+    display: flex;
 }
 
 .copyright {

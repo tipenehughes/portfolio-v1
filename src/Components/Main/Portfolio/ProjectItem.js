@@ -6,7 +6,7 @@ import styles from "../../../CSS/Main/Portfolio/ProjectItem.module.css";
 const ProjectItem = ({ data }) => {
     return (
         <div className={styles.project}>
-            <div class={styles.projectInner}>
+            <div className={styles.projectInner}>
                 <img
                     className={styles.projectImage}
                     src={data.image}
@@ -16,7 +16,9 @@ const ProjectItem = ({ data }) => {
                     <h3 className={styles.projectOverlayHeader}>
                         {data.heading}
                     </h3>
-                    <h4 className={styles.projectOverlaySubHeader}>{data.p1}</h4>
+                    <h4 className={styles.projectOverlaySubHeader}>
+                        {data.p1}
+                    </h4>
                     <div>
                         <a
                             className={styles.projectOverlayLink}

@@ -18,7 +18,7 @@ const MobileNav = ({
             opacity: 0,
             x: width,
             transition: {
-                duration: 0.2,
+                duration: 0.5,
                 type: "ease",
             },
         },
@@ -26,7 +26,7 @@ const MobileNav = ({
             opacity: 1,
             x: 0,
             transition: {
-                duration: 0.2,
+                duration: 0.5,
                 type: "ease",
             },
         },
@@ -38,7 +38,7 @@ const MobileNav = ({
             y: -75,
             opacity: 0,
             transition: {
-                duration: 0.2,
+                duration: 0.1,
                 type: "ease",
             },
         },
@@ -77,6 +77,7 @@ const MobileNav = ({
                     variants={mobileMenu}
                     inital={{ opacity: 0 }}
                     animate={menuOpen ? "open" : "closed"}
+                    style={{ transform: `translateX(${width})` }}
                 >
                     <motion.ul
                         className={styles.mobileNavOptions}
@@ -84,7 +85,7 @@ const MobileNav = ({
                         inital={{ opacity: 0 }}
                         animate={menuOpen ? "open" : "closed"}
                     >
-                        {navigationLinks.map((links) => {
+                        {navigationLinks.map((links, index) => {
                             return (
                                 <NavLinks
                                     className={styles.mobileNavOverlayHidden}
@@ -92,10 +93,11 @@ const MobileNav = ({
                                     navClass={"mobileMenuItem"}
                                     input={links}
                                     width={width}
+                                    key={index}
                                 />
                             );
                         })}
-                        <div
+                        <ul
                             className={styles.mobileNavOverlayHidden}
                             variants={mobileMenu}
                             inital={"open"}
@@ -103,10 +105,10 @@ const MobileNav = ({
                             className={styles.socialContainer}
                         >
                             <NavSocial
-                                navSocial={""}
+                                socialClass={""}
                                 socialIcons={"mobileSocialIcons"}
                             />
-                        </div>
+                        </ul>
                     </motion.ul>
                 </motion.div>
                 <button

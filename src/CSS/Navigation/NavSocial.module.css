@@ -15,3 +15,9 @@
     font-size: 3rem;
     margin: 2rem;
 }
+
+.footerSocialIcons {
+    font-size: 3rem;
+    margin: 0 2rem;
+    color: var(--secondary-color);
+}
