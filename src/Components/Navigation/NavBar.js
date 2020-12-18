@@ -51,8 +51,7 @@ const NavBar = () => {
                         return (
                             <NavLinks
                                 input={links}
-                                navClass={"navItem"}
-                                width={width}
+                                navClass={"navItem"}                                
                             />
                         );
                     })}

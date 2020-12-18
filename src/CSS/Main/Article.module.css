@@ -1,9 +1,17 @@
 .container {
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
     padding: 5% 15% 5% 15%;
     display: grid;
     place-items: center;
+}
+
+.container:nth-of-type(3) {
+    background-image: linear-gradient(
+        transparent 250px,
+        rgb(232, 234, 241) 100px,
+        rgb(232, 234, 241) 50%
+    );
 }
 
 .articleHeading {
@@ -53,9 +61,12 @@
     background: var(--underline-color);
 }
 
-
 @media only screen and (max-width: 768px) {
     .container {
         padding: 5% 5% 5% 5%;
+    }
+    .container:last-of-type,
+    .container:first-of-type {
+        min-height: 50vh;
     }
 }

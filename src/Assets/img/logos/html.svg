@@ -1,22 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="2000px"
-	 height="2000px" viewBox="0 0 2000 2000" enable-background="new 0 0 2000 2000" xml:space="preserve">
-<g id="Logo_artwork">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="1582.746"
+   height="1796.032"
+   viewBox="0 0 1582.746 1796.032"
+   enable-background="new 0 0 2000 2000"
+   xml:space="preserve"
+   id="svg211"
+   sodipodi:docname="html.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"><metadata
+   id="metadata217"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs215" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="986"
+   id="namedview213"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="0.4"
+   inkscape:cx="791.373"
+   inkscape:cy="898.016"
+   inkscape:window-x="-11"
+   inkscape:window-y="-11"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg211" />
+<g
+   id="Logo_artwork"
+   transform="translate(-208.627,-101.984)">
 </g>
-<g id="Guides_to_delete">
-	<g>
-		<polygon fill="#E34E26" points="352.732,1718.4 208.627,101.984 1791.373,101.984 1647.093,1718.528 999.615,1898.016 		"/>
-		<polygon fill="#EF662A" points="1000,234.108 1000,1760.716 1523.565,1615.585 1646.918,234.108 		"/>
-		<polygon fill="#FFFFFF" points="503.468,432.378 556.906,1031.897 1244.048,1031.897 1220.988,1289.041 999.744,1348.857 
-			778.919,1289.128 764.155,1124.017 565.155,1124.017 593.611,1442.302 999.697,1555.086 1406.296,1442.302 1460.806,833.669 
-			738.229,833.669 720.086,630.648 1478.168,630.648 1478.773,630.648 1496.532,432.378 		"/>
-		<g>
-			<polygon fill="#EBEBEB" points="1000,432.378 503.468,432.378 556.906,1031.897 1000,1031.897 1000,833.669 738.229,833.669 
-				720.086,630.648 1000,630.648 			"/>
-			<polygon fill="#EBEBEB" points="1000,1348.771 999.744,1348.857 778.919,1289.128 764.155,1124.017 565.155,1124.017 
-				593.611,1442.302 999.697,1555.086 1000,1555.001 			"/>
+<g
+   id="Guides_to_delete"
+   transform="translate(-208.627,-101.984)">
+	<g
+   id="g208">
+		<polygon
+   fill="#e34e26"
+   points="1791.373,101.984 1647.093,1718.528 999.615,1898.016 352.732,1718.4 208.627,101.984 "
+   id="polygon196" />
+		<polygon
+   fill="#ef662a"
+   points="1523.565,1615.585 1646.918,234.108 1000,234.108 1000,1760.716 "
+   id="polygon198" />
+		<polygon
+   fill="#ffffff"
+   points="1244.048,1031.897 1220.988,1289.041 999.744,1348.857 778.919,1289.128 764.155,1124.017 565.155,1124.017 593.611,1442.302 999.697,1555.086 1406.296,1442.302 1460.806,833.669 738.229,833.669 720.086,630.648 1478.168,630.648 1478.773,630.648 1496.532,432.378 503.468,432.378 556.906,1031.897 "
+   id="polygon200" />
+		<g
+   id="g206">
+			<polygon
+   fill="#ebebeb"
+   points="556.906,1031.897 1000,1031.897 1000,833.669 738.229,833.669 720.086,630.648 1000,630.648 1000,432.378 503.468,432.378 "
+   id="polygon202" />
+			<polygon
+   fill="#ebebeb"
+   points="778.919,1289.128 764.155,1124.017 565.155,1124.017 593.611,1442.302 999.697,1555.086 1000,1555.001 1000,1348.771 999.744,1348.857 "
+   id="polygon204" />
 		</g>
 	</g>
 </g>

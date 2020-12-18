@@ -9,6 +9,7 @@ const Article = ({ data, index }) => {
         const routeName = d.heading.split(" ")[0];
         return routeName.toLowerCase();
     };
+
     return (
         <article className={styles.container} id={setRoute(data)}>
             <section className={styles.articleCard}>
@@ -26,7 +27,6 @@ const Article = ({ data, index }) => {
                 {data.form && <ContactForm />}
             </section>
         </article>
-        // </Route>
     );
 };
 

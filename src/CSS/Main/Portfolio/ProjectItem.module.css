@@ -49,12 +49,16 @@
     font-weight: 400;
     color: #fff;
     flex: 1 1 auto;
+    padding: 0.2rem;
+    text-align: center;
 }
 
-.projectOverlayP {
+.projectOverlaySubHeader {
     font-size: 1rem;
     color: #fff;
     flex: none;
+    font-weight: 400;
+    padding: 0.2rem;
     text-align: center;
 }
 
@@ -80,6 +84,20 @@
 
 .projectIcon {
     font-size: 0.8rem;
+    margin-left: 0.5rem;
+    line-height: 5rem;
     text-align: right;
     color: #fff;
+}
+
+@media only screen and (max-width: 576px) {
+    .project {
+        padding: 0.5rem 0;
+    }
+    .projectOverlay {
+        padding: 0.5rem;
+    }
+    .projectOverlayLink {
+        width: 8rem;
+    }
 }

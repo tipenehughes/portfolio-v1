@@ -77,6 +77,7 @@ const ContactForm = () => {
                 <div className={styles.submit}>
                     <input
                         type="submit"
+                        value="Submit"
                         id="submitBtn"
                         className={styles.submitInput}
                     />

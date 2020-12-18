@@ -16,7 +16,7 @@ const ProjectItem = ({ data }) => {
                     <h3 className={styles.projectOverlayHeader}>
                         {data.heading}
                     </h3>
-                    <p className={styles.projectOverlayP}>{data.p1}</p>
+                    <h4 className={styles.projectOverlaySubHeader}>{data.p1}</h4>
                     <div>
                         <a
                             className={styles.projectOverlayLink}

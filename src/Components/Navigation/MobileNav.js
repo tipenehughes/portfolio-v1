@@ -91,6 +91,7 @@ const MobileNav = ({
                                     handleSetMobileMenu={handleSetMobileMenu}
                                     navClass={"mobileMenuItem"}
                                     input={links}
+                                    width={width}
                                 />
                             );
                         })}
@@ -112,7 +113,7 @@ const MobileNav = ({
                     className={styles.mobileMenu}
                     onClick={() => handleSetMobileMenu()}
                     aria-label="Toggle menu"
-                    aria-controls="mobile-nav-overlay-hidden"
+                    aria-controls="mobileNavOverlayHidden"
                 >
                     {menuOpen ? (
                         <AnimatePresence>

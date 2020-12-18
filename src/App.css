@@ -13,6 +13,17 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background: url("/src/Assets/img/backgrounds/bg.svg") no-repeat,
+        url("/src/Assets/img/backgrounds/bg2.svg") no-repeat,
+        url("/src/Assets/img/backgrounds/bg3.svg") no-repeat,
+        url("/src/Assets/img/backgrounds/bg4.svg") no-repeat,
+        url("/src/Assets/img/backgrounds/bg5.svg") no-repeat;
+    background-position: top -25px left -550px, top -400px right -550px,
+        top 800px right -600px, top 1300px left -450px, top 1600px right -400px;
+    background-size: 800px;
+}
+
 .container {
     min-height: 100vh;
     width: 100%;
