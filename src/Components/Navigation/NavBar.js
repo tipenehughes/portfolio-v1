@@ -13,9 +13,17 @@ const NavBar = () => {
     const handleResize = () => {
         setWidth(window.innerWidth);
     };
+    // To set overflow hidden on body element when menu open to prevent scroll
+    const bodyScroll = () => {
+        mobileMenu === true
+            ? (document.body.style.overflow = "hidden")
+            : (document.body.style.overflow = null);
+    };
+
     useEffect(() => {
         window.addEventListener("resize", handleResize);
-    }, []);
+        bodyScroll();
+    }, [mobileMenu]);
 
     // To set state if NavBar grows
     const scrollFunction = () => {

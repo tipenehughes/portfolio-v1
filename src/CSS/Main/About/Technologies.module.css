@@ -46,14 +46,6 @@
     outline: none;
 }
 
-.button:first-of-type {
-    border-radius: 15px 0 0 0;
-}
-
-.button:last-of-type {
-    border-radius: 0 15px 0 0;
-}
-
 .selected {
     border-bottom: 3px solid var(--underline-color);
 }
@@ -73,7 +65,15 @@
 
 @media only screen and (max-width: 480px) {
     .technologiesContainer {
+        width: 100%;
         flex-wrap: wrap;
+    }
+    .buttonContainer {
+        width: 100%;
+        padding: 0;
+    }
+    .button {
+        padding: 0.5rem 0;
     }
     .imageContainer {
         flex: 1 1 40%;

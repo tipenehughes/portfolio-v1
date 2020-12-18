@@ -1,7 +1,7 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 import NavSocial from "./NavSocial";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "../../CSS/Navigation/MobileNav.module.css";
@@ -46,9 +46,25 @@ const MobileNav = ({
             y: 0,
             opacity: 1,
             transition: {
-                duration: 0.8,
+                duration: 0.5,
                 type: "ease",
                 delay: 0.3,
+            },
+        },
+    };
+
+    // Menu button icon animations
+    const menuIcons = {
+        open: {
+            opacity: 1,
+            transition: {
+                duration: 0.3,
+            },
+        },
+        closed: {
+            opacity: 0,
+            transition: {
+                duration: 0.3,
             },
         },
     };
@@ -99,15 +115,35 @@ const MobileNav = ({
                     aria-controls="mobile-nav-overlay-hidden"
                 >
                     {menuOpen ? (
-                        <FontAwesomeIcon
-                            icon={["fas", "bars"]}
-                            className={styles.icon}
-                        />
+                        <AnimatePresence>
+                            <motion.div
+                                key="times"
+                                initial={{ opacity: 0 }}
+                                variants={menuIcons}
+                                animate="open"
+                                exit="closed"
+                            >
+                                <FontAwesomeIcon
+                                    icon={["fas", "times"]}
+                                    className={styles.icon}
+                                />
+                            </motion.div>
+                        </AnimatePresence>
                     ) : (
-                        <FontAwesomeIcon
-                            icon={["fas", "bars"]}
-                            className={styles.icon}
-                        />
+                        <AnimatePresence>
+                            <motion.div
+                                key="bars"
+                                initial={{ opacity: 0 }}
+                                variants={menuIcons}
+                                animate="open"
+                                exit="closed"
+                            >
+                                <FontAwesomeIcon
+                                    icon={["fas", "bars"]}
+                                    className={styles.icon}
+                                />
+                            </motion.div>
+                        </AnimatePresence>
                     )}
                 </button>
             </div>
