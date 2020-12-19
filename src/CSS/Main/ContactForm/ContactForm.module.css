@@ -24,13 +24,6 @@
     visibility: hidden;
 }
 
-.small {
-    position: absolute;
-    bottom: -12px;
-    left: 4px;
-    visibility: hidden;
-}
-
 .form div {
     width: 50%;
     padding: 0.25rem;
