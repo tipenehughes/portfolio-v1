@@ -13,6 +13,7 @@
     "framer-motion": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-reveal": "^1.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.3.1",
