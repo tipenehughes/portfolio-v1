@@ -4,13 +4,23 @@ import {
     faExclamationCircle,
     faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { ToastContainer, toast } from "react-toastify";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "../../../CSS/Main/ContactForm/ContactForm.module.css";
 
 const ContactForm = () => {
-    const [form, setForm] = useState({ name: "", email: "", message: "" });
-
+    const toastSuccess = () => {
+        return toast("Great! We'll be in touch soon :)", {
+            toastId: "success",
+        });
+    };
+    const toastError = () => {
+        return toast("Oops! Check your details and try again.", {
+            toastId: "error",
+        });
+    };
     const encode = (data) => {
         return Object.keys(data)
             .map(
@@ -22,114 +32,174 @@ const ContactForm = () => {
             .join("&");
     };
 
-    const handleChange = (e) =>
-        setForm({ ...form, [e.target.name]: e.target.value });
-    const handleSubmit = (e) => {
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...form }),
-        })
-            .then(() =>
-                toast("Thanks, I'll be in touch soon!", {
-                    position: toast.POSITION.BOTTOM_CENTER,
-                    autoClose: 5000,
-                    hideProgressBar: true,
-                })
-            )
-            .catch((error) =>
-                toast("Oops, try again!" + error, {
-                    position: toast.POSITION.BOTTOM_CENTER,
-                    autoClose: 5000,
-                    hideProgressBar: true,
-                })
-            );
-        setForm({ name: "", email: "", message: "" });
-        e.preventDefault();
-    };
-    const { name, email, message } = form;
+    // const nameError = touched.name && errors.name;
+    // const emailError = touched.email && errors.email;
+    // const messageError = touched.message && errors.message;
 
     return (
         <div className={styles.contactForm}>
-            <form onSubmit={handleSubmit}>
-                <input type="hidden" name="form-name" value="contact" />
-                <div className={styles.form}>
-                    <div className={styles.formControl}>
-                        <label htmlFor="name" className={styles.formLabel}>
-                            Name
-                        </label>
-                        <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder="Name"
-                            value={name}
-                            className={styles.formInput}
-                            onChange={handleChange}
-                        />
-                        <FontAwesomeIcon
-                            icon={faCheckCircle}
-                            className={styles.formIcon}
-                        />
-                        <FontAwesomeIcon
-                            icon={faExclamationCircle}
-                            className={styles.formIcon}
-                        />
-                    </div>
-                    <div className={styles.formControl}>
-                        <label htmlFor="email" className={styles.formLabel}>
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                            value={email}
-                            className={styles.formInput}
-                            onChange={handleChange}
-                        />
-                        <FontAwesomeIcon
-                            icon={faCheckCircle}
-                            className={styles.formIcon}
-                        />
-                        <FontAwesomeIcon
-                            icon={faExclamationCircle}
-                            className={styles.formIcon}
-                        />
-                    </div>
-                    <div className={styles.formControl}>
-                        <label htmlFor="message" className={styles.formLabel}>
-                            Message
-                        </label>
-                        <textarea
-                            name="message"
-                            id="message"
-                            placeholder="Message"
-                            value={message}
-                            className={`${styles.formInput} ${styles.formTextarea}`}
-                            onChange={handleChange}
-                        ></textarea>
-                        <FontAwesomeIcon
-                            icon={faCheckCircle}
-                            className={styles.formIcon}
-                        />
-                        <FontAwesomeIcon
-                            icon={faExclamationCircle}
-                            className={styles.formIcon}
-                        />
-                    </div>
-                </div>
-                <div className={styles.submit}>
-                    <input
-                        type="submit"
-                        value="Submit"
-                        id="submitBtn"
-                        className={styles.submitInput}
-                    />
-                </div>
-            </form>
-            <ToastContainer />
+            <Formik
+                initialValues={{
+                    email: "",
+                    name: "",
+                    message: "",
+                }}
+                validationSchema={Yup.object({
+                    name: Yup.string()
+                        .max(15, "Must be 15 characters or less")
+                        .required("Required"),
+                    email: Yup.string()
+                        .email("Invalid email address")
+                        .required("Required"),
+                    message: Yup.string()
+                        .max(120, "Must be 120 characters or less")
+                        .required("Required"),
+                })}
+                onSubmit={(values, { setSubmitting, resetForm }) => {
+                    fetch("/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: encode({
+                            "form-name": "contact",
+                            ...values,
+                        }),
+                    })
+                        .then(() => {
+                            toastSuccess();
+                            setSubmitting(false);
+                            console.log(values);
+                            resetForm();
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                            toastError();
+                            setSubmitting(false);
+                        });
+                }}
+            >
+                {({ errors, touched, isSubmitting }) => (
+                    <Form>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div className={styles.form}>
+                            <div className={styles.formControl}>
+                                <label
+                                    htmlFor="name"
+                                    className={styles.formLabel}
+                                >
+                                    Name
+                                </label>
+                                <Field
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Name"
+                                    className={styles.formInput}
+                                />
+
+                                {touched.name && !errors.name && (
+                                    <FontAwesomeIcon
+                                        icon={faCheckCircle}
+                                        className={`${styles.formIcon} ${styles.formIconSuccess}`}
+                                    />
+                                )}
+                                {touched.name && errors.name && (
+                                    <>
+                                        <ErrorMessage
+                                            component={"small"}
+                                            className={styles.errorMessage}
+                                            name="name"
+                                        />
+                                        <FontAwesomeIcon
+                                            icon={faExclamationCircle}
+                                            className={`${styles.formIcon} ${styles.formIconError}`}
+                                        />
+                                    </>
+                                )}
+                            </div>
+                            <div className={styles.formControl}>
+                                <label
+                                    htmlFor="email"
+                                    className={styles.formLabel}
+                                >
+                                    Email
+                                </label>
+                                <Field
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Email"
+                                    className={styles.formInput}
+                                />
+
+                                {touched.email && !errors.email && (
+                                    <FontAwesomeIcon
+                                        icon={faCheckCircle}
+                                        className={`${styles.formIcon} ${styles.formIconSuccess}`}
+                                    />
+                                )}
+                                {touched.email && errors.email && (
+                                    <>
+                                        <ErrorMessage
+                                            component={"small"}
+                                            className={styles.errorMessage}
+                                            name="email"
+                                        />
+                                        <FontAwesomeIcon
+                                            icon={faExclamationCircle}
+                                            className={`${styles.formIcon} ${styles.formIconError}`}
+                                        />
+                                    </>
+                                )}
+                            </div>
+                            <div className={styles.formControl}>
+                                <label
+                                    htmlFor="message"
+                                    className={styles.formLabel}
+                                >
+                                    Message
+                                </label>
+                                <Field
+                                    name="message"
+                                    id="message"
+                                    placeholder="Message"
+                                    as="textarea"
+                                    className={`${styles.formInput} ${styles.formTextarea}`}
+                                />
+
+                                {touched.message && !errors.message && (
+                                    <FontAwesomeIcon
+                                        icon={faCheckCircle}
+                                        className={`${styles.formIcon} ${styles.formIconSuccess}`}
+                                    />
+                                )}
+                                {touched.message && errors.message && (
+                                    <>
+                                        <ErrorMessage
+                                            component={"small"}
+                                            className={styles.errorMessage}
+                                            name="message"
+                                        />
+                                        <FontAwesomeIcon
+                                            icon={faExclamationCircle}
+                                            className={`${styles.formIcon} ${styles.formIconError}`}
+                                        />
+                                    </>
+                                )}
+                            </div>
+                        </div>
+                        <div className={styles.submit}>
+                            <input
+                                type="submit"
+                                value="Submit"
+                                id="submitBtn"
+                                className={styles.submitInput}
+                            />
+                        </div>
+                    </Form>
+                )}
+            </Formik>
         </div>
     );
 };

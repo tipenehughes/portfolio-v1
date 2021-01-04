@@ -13,7 +13,7 @@ const ProjectContainer = () => {
             alt: "Whakaari website",
             heading: "Whakaari Rotorua",
             p1: "International Performance Artists",
-            l1: "https://github.com/tipenehughes/Whakaari-Rotorua",
+            l1: "https://github.com/tipenehughes/whakaari",
             a1: "Github page for a Whakaari website project.",
             l2: "https://whakaari.netlify.app/",
             a2: "Whakaari website project live website.",

@@ -3,6 +3,7 @@ import Landing from "./Components/Landing/Landing";
 import NavBar from "./Components/Navigation/NavBar";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +18,17 @@ function App() {
                 <Route path="/" component={Landing} />
                 <Main />
                 <Footer />
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
         </Router>
     );
