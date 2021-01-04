@@ -1,11 +1,13 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import smoothscroll from "smoothscroll-polyfill";
 import Button from "../Utilities/Button";
 import avatar from "../../Assets/img/avatar.svg";
 import { HashLink as Link } from "react-router-hash-link";
 import styles from "../../CSS/Landing/Landing.module.css";
 
 const Landing = () => {
+    smoothscroll.polyfill();
     return (
         <header id="landing" className={`${styles.landing} ${"container"}`}>
             <Fade>
@@ -16,7 +18,7 @@ const Landing = () => {
                         <span>I'm Tipene.</span>
                     </h1>
                     <h2>I'm a New York City based front end developer.</h2>
-                    <Link to="/#portfolio">
+                    <Link smooth to="/#portfolio">
                         <Button input={"See my work"} />
                     </Link>
                 </section>
