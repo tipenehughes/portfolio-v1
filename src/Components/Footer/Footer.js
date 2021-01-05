@@ -10,7 +10,7 @@ const Footer = () => {
             </ul>
             <div className={styles.copyright}>
                 <small>Handcrafted by me.</small>
-                <small>&copy; 2020</small>
+                <small>&copy; 2021</small>
             </div>
         </footer>
     );
