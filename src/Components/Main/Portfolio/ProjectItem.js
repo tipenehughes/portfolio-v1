@@ -17,7 +17,9 @@ const ProjectItem = ({ data }) => {
                 /> */}
                 <picture className={styles.projectImage}>
                     <source media="(max-width:480px)" srcset={data.image[0]} />
-                    <source media="(min-width:481px)" srcset={data.image[1]} />
+                    <source media="(max-width:768px)" srcset={data.image[1]} />
+                    <source media="(min-width:769px)" srcset={data.image[0]} />
+                    <source media="(min-width:1300px)" srcset={data.image[1]} />
                     <img src={data.image[1]} alt={data.alt} />
                 </picture>
                 <div className={styles.projectOverlay}>
