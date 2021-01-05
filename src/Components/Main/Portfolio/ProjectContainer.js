@@ -19,14 +19,15 @@ const ProjectContainer = () => {
             a2: "Whakaari website project live website.",
         },
         {
-            image: whangamarino,
-            alt: "Whangamarino School website",
-            heading: "Whangamarino School",
-            p1: "Indigenous Elementary Aged School",
-            l1: "https://github.com/tipenehughes/Whangamarino-School",
+            image: spacex,
+            alt: "Space X project website",
+            heading: "SpaceX Project",
+            p1: "SpaceX project displaying current rocket and launch data",
+
+            l1: "https://github.com/tipenehughes/space-x-app",
             a1: "Github page for a project.",
-            l2: "https://whangamarino.netlify.app/",
-            a2: "Whangamarino website project live website.",
+            l2: "https://spacex-project.netlify.app/",
+            a2: "Pounamunui website project live website.",
         },
         {
             image: pounamunui,
@@ -38,15 +39,14 @@ const ProjectContainer = () => {
             l2: "https://pounamunui.netlify.app/",
         },
         {
-            image: spacex,
-            alt: "Space X project website",
-            heading: "SpaceX Project",
-            p1: "SpaceX project displaying current rocket and launch data",
-
-            l1: "https://github.com/tipenehughes/space-x-app",
+            image: whangamarino,
+            alt: "Whangamarino School website",
+            heading: "Whangamarino School",
+            p1: "Indigenous Elementary Aged School",
+            l1: "https://github.com/tipenehughes/Whangamarino-School",
             a1: "Github page for a project.",
-            l2: "https://spacex-project.netlify.app/",
-            a2: "Pounamunui website project live website.",
+            l2: "https://whangamarino.netlify.app/",
+            a2: "Whangamarino website project live website.",
         },
     ];
     return (
