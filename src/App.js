@@ -1,6 +1,6 @@
 import "./App.css";
 import Landing from "./Components/Landing/Landing";
-import NavBar from "./Components/Navigation/NavBar";
+import NavBar from "./Components/Navigation/NavBar/NavBar";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 import { ToastContainer } from "react-toastify";

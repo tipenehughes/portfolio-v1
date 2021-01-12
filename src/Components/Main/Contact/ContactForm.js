@@ -8,7 +8,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import styles from "../../../CSS/Main/ContactForm/ContactForm.module.css";
+import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {
     const toastSuccess = () => {

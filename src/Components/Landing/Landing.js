@@ -4,7 +4,7 @@ import smoothscroll from "smoothscroll-polyfill";
 import Button from "../Utilities/Button";
 import avatar from "../../Assets/img/avatar.svg";
 import { HashLink as Link } from "react-router-hash-link";
-import styles from "../../CSS/Landing/Landing.module.css";
+import styles from "./Landing.module.css";
 
 const Landing = () => {
     smoothscroll.polyfill();

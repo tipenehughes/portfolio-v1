@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NavLinks from "./NavLinks";
-import NavSocial from "./NavSocial";
-import MobileNav from "./MobileNav";
-import styles from "../../CSS/Navigation/NavBar.module.css";
+import NavLinks from "../NavLinks/NavLinks";
+import NavSocial from "../NavSocial/NavSocial";
+import MobileNav from "../MobileNav/MobileNav";
+import styles from "./NavBar.module.css";
 
 const NavBar = () => {
     const [navScroll, setNavScroll] = useState("");

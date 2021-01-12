@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../CSS/Main/About/Technologies.module.css";
+import styles from "./Technologies.module.css";
 
 import html from "../../../Assets/img/logos/html.svg";
 import css from "../../../Assets/img/logos/css.svg";

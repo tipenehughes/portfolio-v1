@@ -3,25 +3,17 @@ import whakaariSm from "../../../Assets/img/Portfolio items/whakaari-400w.png";
 import whakaariLg from "../../../Assets/img/Portfolio items/whakaari-700w.png";
 import pounamunuiSm from "../../../Assets/img/Portfolio items/pounamunui-400w.png";
 import pounamunuiLg from "../../../Assets/img/Portfolio items/pounamunui-700w.png";
-import whangamarinoSm from "../../../Assets/img/Portfolio items/whangamarino-400w.png";
+import newsAggregator from "../../../Assets/img/Portfolio items/news-aggregator-700w.png";
 import whangamarinoLg from "../../../Assets/img/Portfolio items/whangamarino-700w.png";
 import spacexSm from "../../../Assets/img/Portfolio items/spacex-400w.png";
 import spacexLg from "../../../Assets/img/Portfolio items/spacex-700w.png";
-import styles from "../../../CSS/Main/Portfolio/ProjectContainer.module.css";
+
 import ProjectItem from "./ProjectItem";
+
+import styles from "./ProjectContainer.module.css";
 
 const ProjectContainer = () => {
     const projects = [
-        {
-            image: [whakaariSm, whakaariLg],
-            alt: "Whakaari website",
-            heading: "Whakaari Rotorua",
-            p1: "International Performance Artists",
-            l1: "https://github.com/tipenehughes/whakaari",
-            a1: "Github page for a Whakaari website project.",
-            l2: "https://whakaari.netlify.app/",
-            a2: "Whakaari website project live website.",
-        },
         {
             image: [spacexSm, spacexLg],
             alt: "Space X project website",
@@ -34,6 +26,16 @@ const ProjectContainer = () => {
             a2: "Pounamunui website project live website.",
         },
         {
+            image: [whakaariSm, whakaariLg],
+            alt: "Whakaari website",
+            heading: "Whakaari Rotorua",
+            p1: "International Performance Artists",
+            l1: "https://github.com/tipenehughes/whakaari",
+            a1: "Github page for a Whakaari website project.",
+            l2: "https://whakaari.netlify.app/",
+            a2: "Whakaari website project live website.",
+        },
+        {
             image: [pounamunuiSm, pounamunuiLg],
             alt: "Pounamunui website",
             heading: "Pounamunui Marae",
@@ -43,14 +45,14 @@ const ProjectContainer = () => {
             l2: "https://pounamunui.netlify.app/",
         },
         {
-            image: [whangamarinoSm, whangamarinoLg],
-            alt: "Whangamarino School website",
-            heading: "Whangamarino School",
-            p1: "Indigenous Elementary Aged School",
-            l1: "https://github.com/tipenehughes/Whangamarino-School",
+            image: [newsAggregator, newsAggregator],
+            alt: "News aggregator website",
+            heading: "News Aggregator",
+            p1: "News aggregator featuring weather, stocks and reddit",
+            l1: "https://github.com/tipenehughes/news-aggregator",
             a1: "Github page for a project.",
-            l2: "https://whangamarino.netlify.app/",
-            a2: "Whangamarino website project live website.",
+            l2: "",
+            a2: "",
         },
     ];
     return (

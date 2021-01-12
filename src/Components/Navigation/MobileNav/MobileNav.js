@@ -1,10 +1,10 @@
 import React from "react";
-import NavLinks from "./NavLinks";
-import NavSocial from "./NavSocial";
+import NavLinks from "../NavLinks/NavLinks";
+import NavSocial from "../NavSocial/NavSocial";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import styles from "../../CSS/Navigation/MobileNav.module.css";
+import styles from "./MobileNav.module.css";
 
 const MobileNav = ({
     handleSetMobileMenu,

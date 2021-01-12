@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../../../CSS/Main/About/Technologies.module.css";
+import styles from "./Technologies.module.css";
 
 import sass from "../../../Assets/img/logos/sass.svg";
 import npm from "../../../Assets/img/logos/npm.svg";

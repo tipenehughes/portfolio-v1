@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Languages from "./Languages";
 import Tools from "./Tools";
-import styles from "../../../CSS/Main/About/Technologies.module.css";
+import styles from "./Technologies.module.css";
 
 const Technologies = () => {
     const [card, setCard] = useState("languages");

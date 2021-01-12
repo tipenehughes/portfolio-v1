@@ -1,6 +1,6 @@
 import React from "react";
-import NavSocial from "../Navigation/NavSocial";
-import styles from "../../CSS/Footer/Footer.module.css";
+import NavSocial from "../Navigation/NavSocial/NavSocial.js";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
     return (

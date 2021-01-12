@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import styles from "../../CSS/Navigation/NavSocial.module.css";
+import styles from "./NavSocial.module.css";
 
 const NavSocial = ({ socialClass, socialIcons }) => {
     return (

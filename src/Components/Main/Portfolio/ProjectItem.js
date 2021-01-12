@@ -1,20 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-import styles from "../../../CSS/Main/Portfolio/ProjectItem.module.css";
+import styles from "./ProjectItem.module.css";
 
 const ProjectItem = ({ data }) => {
     console.log(data.image[0]);
     return (
         <div className={styles.project}>
             <div className={styles.projectInner}>
-                {/* <img
-                    
-                    srcset={`${data.image[0]} 400w, ${data.image[1]} 700w`}
-                    sizes="(max-width: 480px) 400px, 700px"
-                    src={data.image[1]}
-                    alt={data.alt}
-                /> */}
                 <picture className={styles.projectImage}>
                     <source media="(max-width:480px)" srcset={data.image[0]} />
                     <source media="(max-width:768px)" srcset={data.image[1]} />
@@ -43,7 +36,7 @@ const ProjectItem = ({ data }) => {
                                 className={styles.projectIcon}
                             />
                         </a>
-                        <a
+                        {data.l2 && <a
                             className={styles.projectOverlayLink}
                             href={data.l2}
                             target="_blank"
@@ -55,7 +48,7 @@ const ProjectItem = ({ data }) => {
                                 icon={faExternalLinkAlt}
                                 className={styles.projectIcon}
                             />
-                        </a>
+                        </a>}
                     </div>
                 </div>
             </div>

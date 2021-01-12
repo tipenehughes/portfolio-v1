@@ -1,7 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import styles from "../../CSS/Main/Article.module.css";
-import Technologies from "./About Me/Technologies";
+import styles from "./Article.module.css";
+import Technologies from "./About/Technologies";
 import ProjectContainer from "./Portfolio/ProjectContainer";
 import ContactForm from "./Contact/ContactForm";
 
