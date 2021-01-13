@@ -28,16 +28,15 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started-wrench">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage-mag">Usage</a></li>    
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#contact-mailbox_with_mail">Contact</a></li>
+    <li><a href="#acknowledgements-clap">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -68,7 +67,7 @@ Keep reading to see more about this project!
 
 
 <!-- GETTING STARTED -->
-## Getting Started ⚙️
+## Getting Started :wrench:
 
 Follow these steps to get a local copy up and running.
 
@@ -101,10 +100,6 @@ Follow these steps to get a local copy up and running.
 <br/>
 [![Portfolio gif][portfolio-gif]](src/Assets/img/gif.gif)
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact :mailbox_with_mail:
