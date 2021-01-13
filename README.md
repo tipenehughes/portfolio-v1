@@ -96,7 +96,7 @@ Follow these steps to get a local copy up and running.
 <!-- USAGE EXAMPLES -->
 ## Usage :mag:
 
-<a href="https://www.tipenehughes.com/">View Live Demo Here!</a>
+:round_pushpin:<a href="https://www.tipenehughes.com/">View Live Demo Here!</a>
 <br/>
 [![Portfolio gif][portfolio-gif]](src/Assets/img/gif.gif)
 
