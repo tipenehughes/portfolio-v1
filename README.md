@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/tipenehughes/portfolio">
+    <img src="src/Assets/img/avatar.svg" alt="Logo" width="100" height="100">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1 align="center">Welcome to my Portfolio 👋</h3>
 
-## Available Scripts
+  <p align="center">
+    Personal website showcasing my skills and latest projects!    
+    <br />
+    <br />
+    :round_pushpin:<a href="https://www.tipenehughes.com/">View Demo</a>
+  </p>
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#description-ledger">Description</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started-wrench">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage-mag">Usage</a></li>    
+    <li><a href="#contact-mailbox_with_mail">Contact</a></li>
+    <li><a href="#acknowledgements-clap">Acknowledgements</a></li>
+  </ol>
+</details>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- ABOUT THE PROJECT -->
+## Description :ledger:
 
-### `npm run build`
+<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![Portfolio image][portfolio-image]](src/Assets/img/thumbnails/portfolio.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I built this portfolio website as a showcase of my skills and projects. This website was originally built with HTML, CSS and Vanilla JS. As my learning journey has progressed, I've used this website as a testing ground for new technologies and will continue to as my journey continues, so watch this space!
 
-### `npm run eject`
+A list of commonly used resources used are listed in the acknowledgements.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Keep reading to see more about this project!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built With 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* [React](https://reactjs.org/)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+* [React Router](https://reactrouter.com/)
+* [Formik](https://formik.org/)
+* [Framer Motion](https://www.framer.com/motion/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<!-- GETTING STARTED -->
+## Getting Started :wrench:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Follow these steps to get a local copy up and running.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation
 
-### Analyzing the Bundle Size
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the app
+   ```sh
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- USAGE EXAMPLES -->
+## Usage :mag:
 
-### Making a Progressive Web App
+:round_pushpin:<a href="https://www.tipenehughes.com/">View Live Demo Here!</a>
+<br/>
+[![Portfolio gif][portfolio-gif]](src/Assets/img/gif.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+<!-- CONTACT -->
+## Contact :mailbox_with_mail:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-### Deployment
+:e-mail: tipenehughes@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Project Link: [https://github.com/tipenehughes/portfolio](https://github.com/tipenehughes/portfolio)
 
-### `npm run build` fails to minify
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements :clap:
+* [Font Awesome](https://fontawesome.com/)
+* [Yup](https://github.com/jquense/yup)
+* [React Reveal](https://www.react-reveal.com/)
+* [React Toastify](https://github.com/fkhadra/react-toastify)
+* [Smooth Scroll](https://github.com/iamdustan/smoothscroll)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=2867B2
+[linkedin-url]: https://www.linkedin.com/in/tipene-hughes/
+[portfolio-image]: src/Assets/img/thumbnails/portfolio.png
+[portfolio-gif]: src/Assets/img/gif.gif
