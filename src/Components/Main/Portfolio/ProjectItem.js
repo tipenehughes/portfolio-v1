@@ -11,7 +11,7 @@ const ProjectItem = ({ data }) => {
                 <picture className={styles.projectImage}>
                     <source media="(max-width:480px)" srcset={data.image[0]} />
                     <source media="(max-width:768px)" srcset={data.image[1]} />
-                    <source media="(min-width:769px)" srcset={data.image[0]} />
+                    <source media="(min-width:769px)" srcset={data.image[1]} />
                     <source media="(min-width:1300px)" srcset={data.image[1]} />
                     <img src={data.image[1]} alt={data.alt} />
                 </picture>
@@ -36,19 +36,21 @@ const ProjectItem = ({ data }) => {
                                 className={styles.projectIcon}
                             />
                         </a>
-                        {data.l2 && <a
-                            className={styles.projectOverlayLink}
-                            href={data.l2}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label={data.a2}
-                        >
-                            Live Demo
-                            <FontAwesomeIcon
-                                icon={faExternalLinkAlt}
-                                className={styles.projectIcon}
-                            />
-                        </a>}
+                        {data.l2 && (
+                            <a
+                                className={styles.projectOverlayLink}
+                                href={data.l2}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                aria-label={data.a2}
+                            >
+                                Live Demo
+                                <FontAwesomeIcon
+                                    icon={faExternalLinkAlt}
+                                    className={styles.projectIcon}
+                                />
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>

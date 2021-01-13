@@ -51,7 +51,7 @@
 
 <br/>
 
-I built this portfolio website as a showcase of my skills and projects. This website was originally built with HTML, CSS and Vanilla JS. As my learning journey has progressed, I've used this website as a testing ground for new technologies and will continue to as my journey continues, so watch this space!
+I built this portfolio website as a showcase of my skills and projects. This website was originally built with HTML, CSS and Vanilla JS. As my learning journey has progressed, I've used this website as a testing ground for new technologies and will continue to test and implement more as my journey continues, so watch this space!
 
 A list of commonly used resources used are listed in the acknowledgements.
 

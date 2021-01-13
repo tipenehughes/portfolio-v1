@@ -4,7 +4,6 @@ import whakaariLg from "../../../Assets/img/Portfolio items/whakaari-700w.png";
 import pounamunuiSm from "../../../Assets/img/Portfolio items/pounamunui-400w.png";
 import pounamunuiLg from "../../../Assets/img/Portfolio items/pounamunui-700w.png";
 import newsAggregator from "../../../Assets/img/Portfolio items/news-aggregator-700w.png";
-import whangamarinoLg from "../../../Assets/img/Portfolio items/whangamarino-700w.png";
 import spacexSm from "../../../Assets/img/Portfolio items/spacex-400w.png";
 import spacexLg from "../../../Assets/img/Portfolio items/spacex-700w.png";
 
