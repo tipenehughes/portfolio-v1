@@ -82,7 +82,7 @@ Follow these steps to get a local copy up and running.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/tipenehughes/portfolio
    ```
 2. Install NPM packages
    ```sh
@@ -108,7 +108,7 @@ Follow these steps to get a local copy up and running.
 
 :e-mail: tipenehughes@gmail.com
 
-Project Link: [https://github.com/tipenehughes/portfolio](https://github.com/tipenehughes/portfolio)
+Project Link: [https://www.tipenehughes.com/](https://www.tipenehughes.com/)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements :clap:
