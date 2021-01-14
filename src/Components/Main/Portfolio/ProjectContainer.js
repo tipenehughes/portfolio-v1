@@ -15,14 +15,13 @@ const ProjectContainer = () => {
     const projects = [
         {
             image: [spacexSm, spacexLg],
-            alt: "Space X project website",
-            heading: "SpaceX Project",
-            p1: "SpaceX project displaying current rocket and launch data",
-
+            alt: "Space X app",
+            heading: "SpaceX App",
+            p1: "SpaceX App displaying current rocket and launch data",
             l1: "https://github.com/tipenehughes/space-x-app",
             a1: "Github page for a project.",
             l2: "https://spacex-project.netlify.app/",
-            a2: "Pounamunui website project live website.",
+            a2: "SpaceX app live website.",
         },
         {
             image: [whakaariSm, whakaariLg],
@@ -32,7 +31,7 @@ const ProjectContainer = () => {
             l1: "https://github.com/tipenehughes/whakaari",
             a1: "Github page for a Whakaari website project.",
             l2: "https://whakaari.netlify.app/",
-            a2: "Whakaari website project live website.",
+            a2: "Whakaari project live website.",
         },
         {
             image: [pounamunuiSm, pounamunuiLg],
@@ -42,6 +41,7 @@ const ProjectContainer = () => {
             l1: "https://github.com/tipenehughes/Houmaitawhiti-Tribal-Hub",
             a1: "Github page for a project.",
             l2: "https://pounamunui.netlify.app/",
+            a2: "Pounamunui project live website.",
         },
         {
             image: [newsAggregator, newsAggregator],
