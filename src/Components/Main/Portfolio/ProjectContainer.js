@@ -50,8 +50,8 @@ const ProjectContainer = () => {
             p1: "News aggregator featuring weather, stocks and reddit",
             l1: "https://github.com/tipenehughes/news-aggregator",
             a1: "Github page for a project.",
-            l2: "",
-            a2: "",
+            l2: "https://news-aggregator-react.netlify.app/",
+            a2: "News Aggregator live website",
         },
     ];
     return (
