@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faExclamationCircle,
@@ -31,10 +31,6 @@ const ContactForm = () => {
             )
             .join("&");
     };
-
-    // const nameError = touched.name && errors.name;
-    // const emailError = touched.email && errors.email;
-    // const messageError = touched.message && errors.message;
 
     return (
         <div className={styles.contactForm}>
@@ -79,7 +75,7 @@ const ContactForm = () => {
                         });
                 }}
             >
-                {({ errors, touched, isSubmitting }) => (
+                {({ errors, touched }) => (
                     <Form>
                         <input type="hidden" name="form-name" value="contact" />
                         <div className={styles.form}>

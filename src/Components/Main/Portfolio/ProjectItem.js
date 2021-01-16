@@ -4,12 +4,11 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import styles from "./ProjectItem.module.css";
 
 const ProjectItem = ({ data }) => {
-    console.log(data.image[0]);
     return (
         <div className={styles.project}>
             <div className={styles.projectInner}>
                 <picture className={styles.projectImage}>
-                    <source media="(max-width:480px)" srcset={data.image[0]} />
+                    <source media="(max-width:480px)" srcSet={data.image[0]} />
                     <source media="(max-width:768px)" srcset={data.image[1]} />
                     <source media="(min-width:769px)" srcset={data.image[1]} />
                     <source media="(min-width:1300px)" srcset={data.image[1]} />

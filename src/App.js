@@ -1,4 +1,6 @@
 import "./App.css";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 import Landing from "./Components/Landing/Landing";
 import NavBar from "./Components/Navigation/NavBar/NavBar";
 import Main from "./Components/Main/Main";
@@ -10,6 +12,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
+    const { theme } = useContext(ThemeContext);
     library.add(fab, fas);
     return (
         <Router>
