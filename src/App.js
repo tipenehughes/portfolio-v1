@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
     const { isLight } = useContext(ThemeContext);
-    console.log(isLight);
 
     const darkTheme = () => {
         return (
