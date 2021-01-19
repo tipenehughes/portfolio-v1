@@ -6,13 +6,14 @@
     place-items: center;
 }
 
-.container:nth-of-type(3) {
+/* .container:nth-of-type(3) {
     background-image: linear-gradient(
         transparent 250px,
         rgb(232, 234, 241) 100px,
         rgb(232, 234, 241) 50%
     );
-}
+} */
+
 
 .articleHeading {
     display: inline-block;
@@ -32,7 +33,7 @@
     border-radius: 4px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     text-align: center;
-    background: #fff;
+    background-color: #fff;
 }
 
 .articleCard p {
@@ -59,6 +60,11 @@
     height: 5px;
     width: 20%;
     background: var(--underline-color);
+}
+
+.dark {
+    color: var(--dark-text);
+    background-color: var(--dark-card-bg);
 }
 
 @media only screen and (max-width: 768px) {

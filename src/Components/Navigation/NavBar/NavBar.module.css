@@ -10,10 +10,18 @@
     transition: all 0.2s ease-in-out;
 }
 
+.navBar ul:nth-of-type(2) {
+    display: flex;
+}
+
 .scroll {
     height: 9vh;
     background-color: #fff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.03), 0 3px 6px rgba(0, 0, 0, 0.03);
+}
+
+.scroll.dark {
+    background-color: var(--dark-card-bg);
 }
 
 .navBar a,
@@ -27,6 +35,16 @@
     color: var(--underline-color);
     font-weight: 400;
     transition: all 0.2s ease-in-out;
+}
+
+.navBar.dark a,
+.navBar.dark a:link .navBar.dark a:visited {
+    color: var(--dark-text);
+}
+
+.navBar.dark a:focus,
+.navBar.dark a:hover {
+    color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 768px) {

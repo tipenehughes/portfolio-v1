@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faExclamationCircle,
@@ -11,6 +12,9 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {
+    const { isLight } = useContext(ThemeContext);
+    const theme = !isLight ? styles.dark : "";
+
     const toastSuccess = () => {
         return toast("Great! We'll be in touch soon :)", {
             toastId: "success",
@@ -91,7 +95,7 @@ const ContactForm = () => {
                                     name="name"
                                     id="name"
                                     placeholder="Name"
-                                    className={styles.formInput}
+                                    className={`${styles.formInput} ${theme}`}
                                 />
 
                                 {touched.name && !errors.name && (
@@ -126,7 +130,7 @@ const ContactForm = () => {
                                     name="email"
                                     id="email"
                                     placeholder="Email"
-                                    className={styles.formInput}
+                                    className={`${styles.formInput} ${theme}`}
                                 />
 
                                 {touched.email && !errors.email && (
@@ -161,7 +165,7 @@ const ContactForm = () => {
                                     id="message"
                                     placeholder="Message"
                                     as="textarea"
-                                    className={`${styles.formInput} ${styles.formTextarea}`}
+                                    className={`${styles.formInput} ${styles.formTextarea} ${theme}`}
                                 />
 
                                 {touched.message && !errors.message && (
@@ -190,7 +194,7 @@ const ContactForm = () => {
                                 type="submit"
                                 value="Submit"
                                 id="submitBtn"
-                                className={styles.submitInput}
+                                className={`${styles.submitInput} ${theme}`}
                             />
                         </div>
                     </Form>

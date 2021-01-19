@@ -3,15 +3,16 @@ import React, { useState, createContext } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState({
-        light: {
-            color: "rgba(255, 255, 255, 0.87)",
-            backgroundColor: "#0F002E",
-        },
-    });
+    const [isLight, setIsLight] = useState(true);
+
+    const handleSetIsLight = () => {
+        return isLight ? setIsLight(false) : setIsLight(true);
+    };
 
     return (
-        <ThemeContext.Provider value={{ theme }}>
+        <ThemeContext.Provider
+            value={{ isLight, handleSetIsLight }}
+        >
             {children}
         </ThemeContext.Provider>
     );

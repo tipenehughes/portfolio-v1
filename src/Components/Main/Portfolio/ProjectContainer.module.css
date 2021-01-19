@@ -5,8 +5,12 @@
     flex-wrap: wrap;
     min-height: 80%;
     margin-top: 1rem;
-    background: #fff;
+    background-color: #fff;
     flex: 1 1 auto;
+}
+
+.dark {
+    background-color: var(--dark-bg);
 }
 
 @media only screen and (max-width: 768px) {

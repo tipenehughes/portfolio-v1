@@ -10,6 +10,11 @@
     display: flex;
 }
 
+.dark {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
 .copyright {
     text-align: center;
     padding: 1rem;

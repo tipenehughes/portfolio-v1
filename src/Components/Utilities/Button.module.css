@@ -23,3 +23,7 @@
     transform: scale(0.98);
     transition: all ease 0.1s;
 }
+
+.dark, .dark:hover {
+    box-shadow: none;
+}

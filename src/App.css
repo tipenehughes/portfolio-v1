@@ -4,6 +4,9 @@
     --font-color: rgb(34, 34, 34);
     --secondary-color: rgba(113, 46, 255, 0.9);
     --underline-color: rgba(113, 46, 255, 0.5);
+    --dark-bg: rgba(15, 0, 46, 1);
+    --dark-card-bg: rgba(20, 0, 61, 1);
+    --dark-text: rgba(255, 255, 255, 0.87);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,13 +17,16 @@
 }
 
 body {
-    background: url("/src/Assets/img/backgrounds/bg.svg") no-repeat,
-        url("/src/Assets/img/backgrounds/bg2.svg") no-repeat,
-        url("/src/Assets/img/backgrounds/bg3.svg") no-repeat,
-        url("/src/Assets/img/backgrounds/bg4.svg") no-repeat,
-        url("/src/Assets/img/backgrounds/bg5.svg") no-repeat;
+    background-image: url("/src/Assets/img/backgrounds/bg.svg"),
+        url("/src/Assets/img/backgrounds/bg2.svg"),
+        url("/src/Assets/img/backgrounds/bg3.svg"),
+        url("/src/Assets/img/backgrounds/bg4.svg"),
+        url("/src/Assets/img/backgrounds/bg5.svg"),
+        url("/src/Assets/img/backgrounds/bg2.svg");
+    background-repeat: no-repeat;
     background-position: top -25px left -550px, top -400px right -550px,
-        top 800px right -600px, top 1300px left -450px, top 1600px right -400px;
+        top 800px right -600px, top 1300px left -450px, top 1600px right -400px,
+        top 2100px left -500px;
     background-size: 800px;
 }
 

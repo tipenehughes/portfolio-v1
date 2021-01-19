@@ -1,5 +1,5 @@
 import "./App.css";
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import Landing from "./Components/Landing/Landing";
 import NavBar from "./Components/Navigation/NavBar/NavBar";
@@ -12,7 +12,26 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
-    const { theme } = useContext(ThemeContext);
+    const { isLight } = useContext(ThemeContext);
+    console.log(isLight);
+
+    const darkTheme = () => {
+        return (
+            (document.body.style.backgroundColor = "rgba(15, 0, 46, 1)"),
+            (document.body.style.color = "rgba(255, 255, 255, 0.87)")
+        );
+    };
+    const lightTheme = () => {
+        return (
+            (document.body.style.backgroundColor = null),
+            (document.body.style.color = null)
+        );
+    };
+
+    useEffect(() => {
+        return !isLight ? darkTheme() : lightTheme();
+    }, [isLight]);
+
     library.add(fab, fas);
     return (
         <Router>

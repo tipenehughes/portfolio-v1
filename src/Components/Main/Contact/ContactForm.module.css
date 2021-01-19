@@ -83,6 +83,11 @@
     background-color: #f1f1f1;
 }
 
+.dark {
+    background-color: rgba(204, 204, 204, 0.151);
+    color: var(--dark-text);
+}
+
 .submit {
     text-align: left;
     margin-left: 0.25rem;
@@ -108,6 +113,10 @@
         -4px -4px 12px 0 rgba(255, 255, 255, 0.3);
     transform: scale(0.98);
     transition: all ease 0.1s;
+}
+
+.submitInput.dark {
+    box-shadow: none;
 }
 
 @media only screen and (max-width: 768px) {

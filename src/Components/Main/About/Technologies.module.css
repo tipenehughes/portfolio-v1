@@ -46,6 +46,12 @@
     outline: none;
 }
 
+.dark {
+    background-color: var(--dark-card-bg);
+    border-bottom: 3px solid var(--dark-card-bg);
+    color: var(--dark-text);
+}
+
 .selected {
     border-bottom: 3px solid var(--underline-color);
 }

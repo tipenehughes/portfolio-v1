@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 import NavLinks from "../NavLinks/NavLinks";
 import NavSocial from "../NavSocial/NavSocial";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,6 +14,8 @@ const MobileNav = ({
     width,
     navigationLinks,
 }) => {
+    const { isLight } = useContext(ThemeContext);
+    const theme = !isLight ? styles.dark : "";
     // Mobile menu animations
     const mobileMenu = {
         closed: {
@@ -73,12 +77,13 @@ const MobileNav = ({
         <nav className={styles.nav}>
             <div className={styles.mobileNav}>
                 <motion.div
-                    className={styles.mobileNavOverlayHidden}
+                    className={`${styles.mobileNavOverlayHidden} ${theme}`}
                     variants={mobileMenu}
                     inital={{ opacity: 0 }}
                     animate={menuOpen ? "open" : "closed"}
                     style={{ transform: `translateX(${width})` }}
                 >
+                    <ThemeToggle mobile={true} />
                     <motion.ul
                         className={styles.mobileNavOptions}
                         variants={menuItems}

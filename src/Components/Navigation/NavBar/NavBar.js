@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 import NavLinks from "../NavLinks/NavLinks";
 import NavSocial from "../NavSocial/NavSocial";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import MobileNav from "../MobileNav/MobileNav";
 import styles from "./NavBar.module.css";
 
@@ -8,6 +10,8 @@ const NavBar = () => {
     const [navScroll, setNavScroll] = useState("");
     const [mobileMenu, setMobileMenu] = useState(false);
     const [width, setWidth] = useState(window.innerWidth);
+
+    const { isLight } = useContext(ThemeContext);
 
     // To set screen width for mobile menu and NavLinks
     const handleResize = () => {
@@ -45,7 +49,11 @@ const NavBar = () => {
 
     return (
         <>
-            <nav className={`${styles.navBar} ${styles[navScroll]}`}>
+            <nav
+                className={`${styles.navBar} ${styles[navScroll]} ${
+                    !isLight && styles.dark
+                }`}
+            >
                 <ul>
                     {navigationLinks.map((links, index) => {
                         return (
@@ -53,6 +61,7 @@ const NavBar = () => {
                                 input={links}
                                 navClass={"navItem"}
                                 key={index}
+                                isLight={isLight}
                             />
                         );
                     })}
@@ -62,6 +71,7 @@ const NavBar = () => {
                         socialClass={"navSocial"}
                         socialIcons={"socialIcons"}
                     />
+                    <ThemeToggle />
                 </ul>
             </nav>
             <MobileNav

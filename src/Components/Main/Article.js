@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import Fade from "react-reveal/Fade";
 import styles from "./Article.module.css";
 import Technologies from "./About/Technologies";
 import ProjectContainer from "./Portfolio/ProjectContainer";
 import ContactForm from "./Contact/ContactForm";
 
-const Article = ({ data, index }) => {
+const Article = ({ data }) => {
+    const { isLight } = useContext(ThemeContext);
+
     const setRoute = (d) => {
         const routeName = d.heading.split(" ")[0];
         return routeName.toLowerCase();
     };
 
     return (
-        <article className={styles.container} id={setRoute(data)}>
+        <article
+            className={`${styles.container}`}
+            id={setRoute(data)}
+        >
             <Fade>
-                <section className={styles.articleCard}>
+                <section className={`${styles.articleCard} ${!isLight && styles.dark}`}>
                     <div className={styles.headingContainer}>
                         <h2 className={styles.articleHeading}>
                             {data.heading}

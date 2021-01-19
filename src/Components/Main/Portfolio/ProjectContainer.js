@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../../context/ThemeContext";
 import whakaariSm from "../../../Assets/img/Portfolio items/whakaari-400w.png";
 import whakaariLg from "../../../Assets/img/Portfolio items/whakaari-700w.png";
 import pounamunuiSm from "../../../Assets/img/Portfolio items/pounamunui-400w.png";
@@ -12,6 +13,7 @@ import ProjectItem from "./ProjectItem";
 import styles from "./ProjectContainer.module.css";
 
 const ProjectContainer = () => {
+    const { isLight } = useContext(ThemeContext);
     const projects = [
         {
             image: [spacexSm, spacexLg],
@@ -55,7 +57,9 @@ const ProjectContainer = () => {
         },
     ];
     return (
-        <div className={styles.projectContainer}>
+        <div
+            className={`${styles.projectContainer} ${!isLight && styles.dark}`}
+        >
             {projects.map((data, index) => {
                 return <ProjectItem data={data} index={index} key={index} />;
             })}
