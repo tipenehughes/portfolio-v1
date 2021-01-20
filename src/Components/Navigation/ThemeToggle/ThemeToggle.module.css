@@ -42,3 +42,14 @@
     left: 0;
     margin: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .themeContainer {
+        width: 3.4rem;
+        height: 2.5rem;
+    }
+    .themeIcon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
