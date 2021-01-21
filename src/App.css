@@ -17,12 +17,12 @@
 }
 
 body {
-    background-image: url("/src/Assets/img/backgrounds/bg.svg"),
-        url("/src/Assets/img/backgrounds/bg2.svg"),
-        url("/src/Assets/img/backgrounds/bg3.svg"),
-        url("/src/Assets/img/backgrounds/bg4.svg"),
-        url("/src/Assets/img/backgrounds/bg5.svg"),
-        url("/src/Assets/img/backgrounds/bg2.svg");
+    background-image: url("/src/Assets/img/backgrounds/bg.png"),
+        url("/src/Assets/img/backgrounds/bg2.png"),
+        url("/src/Assets/img/backgrounds/bg3.png"),
+        url("/src/Assets/img/backgrounds/bg4.png"),
+        url("/src/Assets/img/backgrounds/bg5.png"),
+        url("/src/Assets/img/backgrounds/bg2.png");
     background-repeat: no-repeat;
     background-position: top -25px left -550px, top -400px right -550px,
         top 800px right -600px, top 1300px left -450px, top 1600px right -400px,
