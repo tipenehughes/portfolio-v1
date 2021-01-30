@@ -5,7 +5,7 @@ import styles from "./Button.module.css";
 const Button = ({ input }) => {
     const { isLight } = useContext(ThemeContext);
     return (
-        <button className={`${styles.button} ${!isLight && styles.dark}`}>
+        <button className={`${styles.button} ${!isLight ? styles.dark : ""}`}>
             {input}
         </button>
     );
